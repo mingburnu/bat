@@ -1,3 +1,3 @@
 @echo off
-start Swd3eDVD.exe
+start play.exe
 exit
