@@ -2,7 +2,7 @@
 
 SET /P remote=remote url :
 SET /P local=local directory :
-SET /P target=target path (target/*):
+SET /P target=target/* :
 
 git clone -n %remote% %local%
 cd %local%
