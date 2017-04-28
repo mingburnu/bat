@@ -1,6 +1,13 @@
 @echo off
-git clone -n https://github.com/mingburnu/gittest.git C:\Users\roderick\Documents\gittest
-cd C:\Users\roderick\Documents\gittest
+
+SET /P remote=remote url :
+SET /P local=local directory :
+SET /P target=target path (target/*):
+
+git clone -n %remote% %local%
+cd %local%
 git config core.sparsecheckout true
-echo a/* >> .git/info/sparse-checkout
+echo %target% >> .git/info/sparse-checkout
 git checkout master
+
+pause
